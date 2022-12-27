@@ -17,7 +17,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 100vh) {#main {margin-left: 0}}
+@keyframes main {
+  0%   {color: #FFFFFF;}
+  25%  {color: #999999;}
+  50%  {color: #FFFFFF;}
+  75%  {color: #999999;}
+  100% {color: #FFFFFF;}
+}
 @keyframes logo {
   0%   {color: #FFFFFF;}
   25%  {color: #555555;}
@@ -28,6 +35,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </style>
 </head>
 <body class="w3-black">
+<div id="btcdata" style="position: absolute; top: 28px; right: 0; width: 300px; text-align: right; font-size: 12px;" class="w3-opacity"></div>
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -37,13 +45,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
   <a href="#access" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>ACCESS</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
@@ -55,8 +63,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#access" class="w3-bar-item w3-button" style="width:25% !important">ACCESS</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
@@ -65,16 +73,160 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo" style="font-family: 'Kanit', sans-serif;">Make IT Work</h1>
-    <p style="animation-name: logo; animation-iteration-count: infinite; animation-duration: 30s; animation-direction: alternate;">Cloud &amp; Automation</p>
-    <img src="design.jpg" alt="MAKE IT WORK" class="w3-image" width="1000" height="1000">
+    <h1 class="w3-jumbo" style="text-shadow: #555 1px 0 10px; font-family: 'Kanit', sans-serif; animation-name: main; animation-iteration-count: infinite; animation-duration: 45s; animation-direction: alternate;">Make IT Work</h1>
+    <p style="animation-name: logo; animation-iteration-count: infinite; animation-duration: 21s; animation-direction: alternate;">Cloud &amp; Automation</p>
+    <div style="margin: auto;"><pre class="w3-hover-opacity" style="margin-top: auto; margin-left: auto; margin-right: auto; margin-bottom: 100vh; text-shadow: #AAA 0 0 5px; font-size: 0.25vw; font-weight: bold;">
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                             ..                                                                                                             
+                                                                                                              .   ....'.                                                               ........,;,.                                                                                                         
+                                                                                                      .   ..... .cxOOOK0d;.   .'.                                              ..   .:dOO0KOo;..,xkc..                                                                                                      
+                                                                                                      .',c;;l'.;xXWMMWNNO;..   :d:.                                          .ol. .:kNMMMWNXd'.. .kNkl;..                                                                                                   
+                                                                                                      ..cdlkx.,dx0NWWXKx:.     .dXx.                                       .c0K: .oxkKWWWX0d,.    :XX0o'.                                                                                                   
+                                                                                                       .oxdXo .;:ccllc:,.       ;XNd.                                      :KM0, .;::ccll:;'      ,0NKx,                                                                                                    
+                                                                                                       .cxd0x. .......          :XKx;                                     .oKWNc   ......         :XNKo.                                                                                                    
+                                                                                                        'oxk0:  .......        ,0NOkl.                                     :ONM0'   .......      'ONXx;.                                                                                                    
+                                                                                                         'oxO0o.  .......    .lKNOxd,                                       ;kNW0:    .....    .:0X0x;.                                                                                                     
+                                                                                                          .,lkK0o;.       .,o0NKko:.                                         .cONNOc'.      .'lOX0x:.                                                                                                       
+                                                                                                             .;lxkxddoodxk0K0xc,... ..                                    .    .cxOXX0kxdooddxkd:'.                                                                                                         
+                                                                                                                  ..,;:::;;'........                                       ........',;:::;,'..                                                                                                              
+                                                                                                                         ..........                                         ..........                                                                                                                      
+                                                                                                                         ..........                                         ...........                                                                                                                     
+                                                                                                                          ........                                           .........                                                                                                                      
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                    ........                                                                                                                                                
+                                                                                                                                                 ..............                                                                                                                                             
+                                                                                                                                               .................                                                                                                                                            
+                                                                                                                                              ....................        ..                                                                                                                                
+                                                                                                                             .........      ...'''''',,'''''''''...      .......                                                                                                                            
+                                                                                                                    ..................     .........................     ..........                                                                                                                         
+                                                                                                        .......''''''''''''............    ...                    ..    ...............                                                                                                                     
+                                                                                                 ...''...'''''''',,,,,,''...............       .                       ............................                                                                                                         
+                                                                                             ..............'''',,,,''''''''...............      ..           ..      ...................'',',,''''''''.....                                                                                                 
+                                                                                         ...........''.....................''................     ..        .      ....................''''''.........'''''''...                                                                                            
+                                                                                       ..............   ....... ...'''''''''''''...............           .     ....................................................                                                                                        
+                                                                                          ......            ....'''',,,,'''''''..................             ..................',;;;;;,'......             ...........                                                                                     
+                                                                                        .....          .....''...',,;;;,'.........................           ......................',;::::cc:;,....             .....  ...                                                                                  
+                                                                                                  ...........,;;;;,,;::;,''.......................           ..............................',;;:::;,..              ..                                                                                      
+                                                                                              ......    ..',,,,,;;;;;;;,,'......................               ..................''........    ...',,,,'..                                                                                                  
+                                                                                          ......    .',,,'''',,,,,'.',;,''.........''.......                       ................''',,'''..         ..',,,'..                                                                                             
+                                                                                       .....    ..';;'....''..'..';;,''..........'.....                                 ...............',,,,,''..          ..,;;'..                                                                                         
+                                                                                    ....      ..,,.....'......',','...............                .........                ..............'','.,,''..           ..,;,...                                                                                     
+                                                                                 ....      ..''.....'........','. ...........'.               ................                ... ..... .........''....           ..','...                                                                                  
+                                                                               ...       ............  .....'.   ...... ......             ......................               ..   ...   ...............           ...'....                                                                               
+                                                                            ....       ............  ........   .. ..  ..  ..                 .................                  ..    ...      ... ........            .......                                                                             
+                                                                          ...        ............  .. ... ..   .  ..      ..                                                      ..     ...      ..   ..  ...             .......                                                                          
+                                                                       ...         ... ........  ..  ..  ..   .  .        .                                                        ..      ..      ..    ..  ...             .......                                                                        
+                                                                     ...         ..  ........   .   ..   .      .         .                                                         .       ..      ..     ..   ..             ...  ...                                                                     
+                                                                   ...         ...  .......         .          .                                                                    ..        .      .       ..  ...              ..  ...                                                                   
+                                                                 ..          ...     .....                                                                                           .        ..      .        .   ...              ..   ..                                                                 
+                                                                            ..      . ..                                                                                                       .                     ..               ..   ..                                                               
+                                                                           .         ..                                                                                                                               ..                ..    .                                                             
+                                                                                                                                                                                                                        ..                                                                                  
+                                                                                                                                                                                                                          .                                                                                 
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            </pre></div>
   </header>
 
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="access" style="margin-bottom: 100vh;">
+    <h2 class="w3-text-light-grey">Access</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <p><a href="https://github.com/makeitworkcloud/" title="GitHub"><i class="fa fa-github"></i> GitHub</a> &nbsp;&middot;&nbsp; <a href="makeitwork.gpg" title="GnuPG"><i class="fa fa-lock"></i> GPG Key</a> &nbsp;&middot;&nbsp; <a href="https://makeitwork.cloud/public" title="MEGA"><img src="mega.ico" alt="M" style="width: 16px; height: 16px;"> Public</a> &nbsp;&middot;&nbsp; <a href="https://makeitwork.cloud/private" title="MEGA"><img src="mega.ico" alt="M" style="width: 16px; height: 16px;"> Private</a> &nbsp;&middot;&nbsp; <a href="http://makeitwork.cloud.s3-website.us-west-2.amazonaws.com/" title="AWS S3"><img src="aws.ico" alt="S3"> S3 URL</a></p>
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <h3 class="w3-padding-24 w3-text-light-grey">Portal &nbsp;&nbsp;&nbsp; <i class="fa fa-external-link w3-opacity"></i></h3>
+        <p><a href="https://console.aws.amazon.com/" title="AWS Management Console"><img src="aws.ico" alt="AWS"> AWS Management Console</a><br>
+        <a href="https://dash.cloudflare.com/" title="Cloudflare Dashboard"><img src="cloudflare.ico" alt="Cloudflare" style="width: 16px; height: 16px;"> Cloudflare Dashboard</a><br>
+        <a href="https://www.ifixit.com/" title="iFixit"><img src="ifixit.ico" alt="iFixit"> iFixit</a><br>
+        <a href="https://mega.nz/login" title="MEGA"><img src="mega.ico" alt="MEGA" style="width: 16px; height: 16px;"> MEGA</a><br>
+        <a href="https://ap.www.namecheap.com/" title="Namecheap Account Panel"><img src="namecheap.ico" alt="Namecheap" style="width: 16px; height: 16px;"> Namecheap Account Panel</a><br>
+        <a href="https://ca.ovh.com/manager/" title="OVHcloud Dashboard"><img src="ovh.ico" alt="OVHcloud"> OVHcloud Dashboard</a><br>
+        <a href="https://console.redhat.com/insights" title="Red Hat Insights"><img src="redhat.ico" alt="Red Hat" style="width: 16px; height: 16px;"> Red Hat Insights</a></p>
+      </div>
+
+      <div class="w3-half">
+        <h3 class="w3-padding-24 w3-text-light-grey">Tools &nbsp;&nbsp;&nbsp; <i class="fa fa-cogs w3-opacity"></i></h3>
+        <p><a href="https://health.aws.amazon.com/health/status" title="AWS Health Dashboard"><img src="aws.ico" alt="AWS"> AWS Health Dashboard</a><br>
+        <a href="https://www.awsspeedtest.com/latency" title="AWS Latency Test"><img src="aws.ico" alt="AWS"> AWS Latency Test</a><br>
+        <a href="https://www.cloudflarestatus.com/" title="Cloudflare Status"><img src="cloudflare.ico" title="Cloudflare" style="width: 16px; height: 16px;"> Cloudflare Status</a><br>
+        <a href="https://www.cloudping.co/grid" title="CloudPing - AWS Latency Monitoring"><img src="aws.ico" alt="AWS"> CloudPing - AWS Latency Monitoring</a><br>
+        <a href="https://speed.cloudflare.com/" title="Internet Speed Test (Cloudflare)"><img src="cloudflare.ico" alt="Cloudflare" style="width: 16px; height: 16px;"> Internet Speed Test</a></p>
+      </div>
+    </div>
+
+  <!-- End Portfolio Section -->
+  </div>
+
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" style="margin-bottom: 100vh;" id="about">
     <h2 class="w3-text-light-grey">About</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>Make IT Work does exactly what the name says, Make Information Technology Work for our customers.  With decades of corporate IT experience, we bring the latest solutions to local customers, in the most cost effective way.</p>
+    <p>Make IT Work does exactly what the name says, Make Information Technology Work for our customers.  With decades of corporate IT experience, we bring the latest solutions to local customers, in the most cost effective way.  And, while no project is outside of our consideration, we specialize in our commitment to providing enterprise-class IT services to non-profit organizations, for a better tomorrow.</p>
     <h3 class="w3-padding-16 w3-text-light-grey">Transformation.</h3>
     <p class="w3-wide">Troubleshooting</p>
     <div class="w3-white">
@@ -170,41 +322,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>No one is better than John Doe.</p>
   <!-- End About Section -->
   </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="access">
-    <h2 class="w3-text-light-grey">Access</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <p><a href="https://github.com/makeitworkcloud/" title="GitHub"><i class="fa fa-github"></i> GitHub</a> &nbsp;&middot;&nbsp; <a href="makeitwork.gpg" title="GnuPG"><i class="fa fa-lock"></i> GPG Key</a> &nbsp;&middot;&nbsp; <a href="https://mega.nz/folder/axtAwSBA#PD4_sHbj74zjmQkCv00yuw" title="MEGA"><img src="mega.ico" alt="M" style="width: 16px; height: 16px;"> Public</a> &nbsp;&middot;&nbsp; <a href="https://mega.nz/folder/XxN0VZiC" title="MEGA"><img src="mega.ico" alt="M" style="width: 16px; height: 16px;"> Private</a> &nbsp;&middot;&nbsp; <a href="http://makeitwork.cloud.s3-website.us-west-2.amazonaws.com/" title="AWS S3"><img src="aws.ico" alt="S3"> S3 URL</a></p>
-
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <h3 class="w3-padding-24 w3-text-light-grey">Portal &nbsp;&nbsp;&nbsp; <i class="fa fa-external-link w3-opacity"></i></h3>
-        <p><a href="https://console.aws.amazon.com/" title="AWS Management Console"><img src="aws.ico" alt="AWS"> AWS Management Console</a><br>
-        <a href="https://dash.cloudflare.com/" title="Cloudflare Dashboard"><img src="cloudflare.ico" alt="Cloudflare" style="width: 16px; height: 16px;"> Cloudflare Dashboard</a><br>
-        <a href="https://www.ifixit.com/" title="iFixit"><img src="ifixit.ico" alt="iFixit"> iFixit</a><br>
-        <a href="https://mega.nz/login" title="MEGA"><img src="mega.ico" alt="MEGA" style="width: 16px; height: 16px;"> MEGA</a><br>
-        <a href="https://ap.www.namecheap.com/" title="Namecheap Account Panel"><img src="namecheap.ico" alt="Namecheap" style="width: 16px; height: 16px;"> Namecheap Account Panel</a><br>
-        <a href="https://ca.ovh.com/manager/" title="OVHcloud Dashboard"><img src="ovh.ico" alt="OVHcloud"> OVHcloud Dashboard</a><br>
-        <a href="https://console.redhat.com/insights" title="Red Hat Insights"><img src="redhat.ico" alt="Red Hat" style="width: 16px; height: 16px;"> Red Hat Insights</a></p>
-      </div>
-
-      <div class="w3-half">
-        <h3 class="w3-padding-24 w3-text-light-grey">Tools &nbsp;&nbsp;&nbsp; <i class="fa fa-cogs w3-opacity"></i></h3>
-        <p><a href="https://health.aws.amazon.com/health/status" title="AWS Health Dashboard"><img src="aws.ico" alt="AWS"> AWS Health Dashboard</a><br>
-        <a href="https://www.awsspeedtest.com/latency" title="AWS Latency Test"><img src="aws.ico" alt="AWS"> AWS Latency Test</a><br>
-        <a href="https://www.cloudflarestatus.com/" title="Cloudflare Status"><img src="cloudflare.ico" title="Cloudflare" style="width: 16px; height: 16px;"> Cloudflare Status</a><br>
-        <a href="https://www.cloudping.co/grid" title="CloudPing - AWS Latency Monitoring"><img src="aws.ico" alt="AWS"> CloudPing - AWS Latency Monitoring</a><br>
-        <a href="https://speed.cloudflare.com/" title="Internet Speed Test (Cloudflare)"><img src="cloudflare.ico" alt="Cloudflare" style="width: 16px; height: 16px;"> Internet Speed Test</a></p>
-      </div>
-    </div>
-
-  <!-- End Portfolio Section -->
-  </div>
 
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact" style="margin-bottom: 100vh;">
     <h2 class="w3-text-light-grey">Contact</h2>
     <hr style="width:200px" class="w3-opacity">
 
@@ -216,19 +336,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- End Contact Section -->
   </div>
   
-    <!-- Footer
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <!-- Footer -->
+  <!-- <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>  -->
   <!-- End footer -->
-  </footer>
+  <!-- </footer> -->
 
 <!-- END PAGE CONTENT -->
 </div>
 
+<script type="text/javascript">
+  var xmlhttp = new XMLHttpRequest();
+  var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var json = JSON.parse(this.responseText);
+      parseJson(json);
+    }
+  };
+
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+  function parseJson(json) {
+    var time = json["time"]["updated"];
+    var usdValue = "<i class=\"fa fa-bitcoin\"></i>itcoin &middot; $" + json["bpi"]["USD"]["rate"];
+
+    document.getElementById("btcdata").innerHTML = "<pre>" + usdValue + "</pre>";
+  }
+</script>
 </body>
 </html>
