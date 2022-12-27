@@ -319,9 +319,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 function parseJson(json) {
   var time = json["time"]["updated"];
   var section = "<div class=\"w3-container w3-display-container w3-section w3-animate-zoom w3-green\">";
-  var headerText = "<h3><i class=\"fa fa-bitcoin\"></i>itcoin";
+  var headerText = "<h3><i class=\"fa fa-bitcoin\"></i>TC";
   var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-xlarge\" style=\"text-shadow: 1px 1px 0 #444;\"><b>&times;</b></span></h3>";
-  var usdValue = "<p><b>$" + json["bpi"]["USD"]["rate"] + "</b></p></div>"
+  var usdValue = "<p>The US Dollar value of 1 Bitcoin is currently <b>$" + json["bpi"]["USD"]["rate"] + "</b></p></div>"
 
   document.getElementById("btcdata").style.display = 'block';
   document.getElementById("btcdata").innerHTML = section + headerText + closeButton + usdValue;
