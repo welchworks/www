@@ -9,11 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
@@ -168,10 +168,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <p><a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://makeitwork.cloud/github" title="GitHub"><i class="fa fa-github"></i> GitHub</a><br>
     <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="makeitwork.gpg" title="GnuPG"><i class="fa fa-lock"></i> GPG Key</a><br>
+    <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://etc.ethermine.org/miners/16b9F7df0fD965B541E5D2132d14422681Fb3e35/dashboard" title="Miner Status"><i class="fa fa-bitcoin"></i> Miner</a><br>
     <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://makeitwork.cloud/public" title="MEGA"><i class="fa fa-cloud-download"></i> Public</a><br>
-    <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://makeitwork.cloud/private" title="MEGA"><i class="fa fa-cloud-download"></i> Private</a><br>
-    <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://etc.ethermine.org/miners/16b9F7df0fD965B541E5D2132d14422681Fb3e35/dashboard" title="Mining Dashboard"><i class="fa fa-wrench"></i> Mining Dashboard</a><br>
-    <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="http://makeitwork.cloud.s3-website.us-west-2.amazonaws.com/" title="AWS S3"><i class="fa fa-amazon"></i> S3 URL</a></p>
+    <a class="w3-button w3-block w3-ripple w3-large w3-dark-grey" href="https://makeitwork.cloud/private" title="MEGA"><i class="fa fa-cloud-download"></i> Private</a></p>
 
     <!-- Mobile split for Portal and Tools -->
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -377,12 +376,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 function parseJson(json) {
   var time = json["time"]["updated"];
   var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
-  var headerText = "<h3><i class=\"fa fa-bitcoin\"></i>TC";
-  var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></h3>";
-  var usdValue = "<p>The US Dollar value of 1 Bitcoin is <b>$" + json["bpi"]["USD"]["rate"] + "</b></p></div>"
+  var usdValue = "<p>The US Dollar value of 1 Bitcoin is <b>$" + json["bpi"]["USD"]["rate"] + "</b>"
+  var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("btcdata").style.display = 'block';
-  document.getElementById("btcdata").innerHTML = section + headerText + closeButton + usdValue;
+  document.getElementById("btcdata").innerHTML = section + usdValue + closeButton;
 }
 
 function parseETHJson(json) {
@@ -391,12 +389,11 @@ function parseETHJson(json) {
   } else {
     var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
   }
-  var headerText = "<h3>ETH Miner";
-  var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></h3>";
-  var info = "<p>Mining hashrate is <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b></p></div>"
+  var info = "<p>Current ETC mining hashrate is <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b>"
+  var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("ethdata").style.display = 'block';
-  document.getElementById("ethdata").innerHTML = section + headerText + closeButton + info;
+  document.getElementById("ethdata").innerHTML = section + info + closeButton;
 }
 </script>
 </body>
