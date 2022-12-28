@@ -1,4 +1,8 @@
 # www
+Google Fonts
+==
+- https://fonts.google.com/
+
 W3.CSS Tutorial
 ==
 - https://www.w3schools.com/w3css/
