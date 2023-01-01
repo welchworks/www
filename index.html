@@ -243,6 +243,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <h3 class="w3-padding-24 w3-text-light-grey">Tools &nbsp;&nbsp;&nbsp; <i class="fa fa-cogs w3-opacity"></i></h3>
         <ul class="w3-ul">
           <li class="w3-bar">
+            <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" title="AWS CLI">
+            <i class="fa fa-amazon w3-bar-item w3-mobile w3-xlarge"></i>
+            <div class="w3-bar-item w3-mobile">
+              <span class="hover-underline-animation">AWS CLI</span>
+            </div>
+            </a>
+          </li>
+          <li class="w3-bar">
             <a href="https://health.aws.amazon.com/health/status" title="AWS Health Dashboard">
             <i class="fa fa-amazon w3-bar-item w3-mobile w3-xlarge"></i>
             <div class="w3-bar-item w3-mobile">
@@ -376,7 +384,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 function parseJson(json) {
   var time = json["time"]["updated"];
   var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
-  var usdValue = "<p>The US Dollar value of 1 Bitcoin is <b>$" + json["bpi"]["USD"]["rate"] + "</b>"
+  var usdValue = "<p>1 BTC value is <b>$" + json["bpi"]["USD"]["rate"] + "</b>"
   var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("btcdata").style.display = 'block';
@@ -389,7 +397,7 @@ function parseETHJson(json) {
   } else {
     var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
   }
-  var info = "<p>Current ETC mining hashrate is <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b>"
+  var info = "<p>ETC hashrate is <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b>"
   var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("ethdata").style.display = 'block';
