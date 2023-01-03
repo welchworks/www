@@ -9,11 +9,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2020.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
@@ -22,23 +27,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 @keyframes main {
-  0%   {color: #FFFFFF;}
-  25%  {color: #999999;}
-  50%  {color: #FFFFFF;}
-  75%  {color: #999999;}
-  100% {color: #FFFFFF;}
+  0%   {color: #FFF;}
+  25%  {color: #999;}
+  50%  {color: #FFF;}
+  75%  {color: #999;}
+  100% {color: #FFF;}
 }
 @keyframes logo {
-  0%   {color: #FFFFFF;}
-  25%  {color: #555555;}
-  50%  {color: #AAAAAA;}
-  75%  {color: #555555;}
-  100% {color: #FFFFFF;}
+  0%   {color: #FFF;}
+  25%  {color: #555;}
+  50%  {color: #AAA;}
+  75%  {color: #555;}
+  100% {color: #FFF;}
 }
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #f1f1f1;
+  color: #F1F1F1;
 }
 .hover-underline-animation::after {
   content: '';
@@ -48,7 +53,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #f1f1f1;
+  background-color: #F1F1F1;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -65,6 +70,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 #access a:active {
   text-decoration: none;
 }
+.accessbutton {font-family: "Bebas Neue", cursive; padding: 20px; width: 100%; margin-bottom: 20px;}
+.navbar {font-family: "Bebas Neue", cursive}
 </style>
 </head>
 <body class="w3-black">
@@ -93,7 +100,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small w3-wide navbar">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#access" class="w3-bar-item w3-button" style="width:25% !important">ACCESS</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
@@ -162,24 +169,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </header>
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="access" style="margin-bottom: 100vh;">
+  <section class="w3-padding-64 w3-content" id="access" style="margin-bottom: 100vh;">
     <h2 class="w3-text-light-grey">Access</h2>
     <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-bar w3-black">
-      <a class="w3-bar-item w3-button w3-ripple w3-large" style="width: 20%;" href="https://makeitwork.cloud/github" title="GitHub"><i class="fa fa-github"></i> GitHub</a>
-      <a class="w3-bar-item w3-button w3-ripple w3-large" style="width: 20%;" href="makeitwork.gpg" title="GnuPG"><i class="fa fa-lock"></i> GPG Key</a>
-      <a class="w3-bar-item w3-button w3-ripple w3-large" style="width: 20%;" href="https://etc.ethermine.org/miners/16b9F7df0fD965B541E5D2132d14422681Fb3e35/dashboard" title="Miner Status"><i class="fa fa-bitcoin"></i> Miner</a>
-      <a class="w3-bar-item w3-button w3-ripple w3-large" style="width: 20%;" href="https://makeitwork.cloud/public" title="MEGA"><i class="fa fa-cloud-download"></i> Public</a>
-      <a class="w3-bar-item w3-button w3-ripple w3-large" style="width: 20%;" href="https://makeitwork.cloud/private" title="MEGA"><i class="fa fa-cloud-download"></i> Private</a>
+    <!-- Access link buttons -->
+    <div class="w3-mobile">
+      <!-- Divider for buttons -->
+      <div class="w3-row-padding w3-container" style="margin:0 -16px">
+        <div class="w3-third">
+          <a class="w3-button w3-2020-navy-blazer w3-grayscale-raw w3-ripple w3-round-large w3-xlarge w3-wide accessbutton" href="https://makeitwork.cloud/github" title="GitHub"><i class="fa fa-github"></i> GitHub</a>
+        </div>
+        <div class="w3-third">
+          <a class="w3-button w3-2020-navy-blazer w3-grayscale-raw w3-ripple w3-round-large w3-xlarge w3-wide accessbutton" href="makeitwork.gpg" title="GnuPG"><i class="fa fa-lock"></i> GPG</a>
+        </div>
+        <div class="w3-third">
+          <a class="w3-button w3-2020-navy-blazer w3-grayscale-raw w3-ripple w3-round-large w3-xlarge w3-wide accessbutton" href="https://etc.ethermine.org/miners/16b9F7df0fD965B541E5D2132d14422681Fb3e35/dashboard" title="Miner Status"><i class="fa fa-bitcoin"></i> Miner</a>
+        </div>
+        <div class="w3-third">
+          <a class="w3-button w3-2020-navy-blazer w3-grayscale-raw w3-ripple w3-round-large w3-xlarge w3-wide accessbutton" href="https://makeitwork.cloud/public" title="MEGA"><i class="fa fa-cloud-download"></i> Public</a>
+        </div>
+        <div class="w3-third">
+          <a class="w3-button w3-2020-navy-blazer w3-grayscale-raw w3-ripple w3-round-large w3-xlarge w3-wide accessbutton" href="https://makeitwork.cloud/private" title="MEGA"><i class="fa fa-cloud-download"></i> Private</a>
+        </div>
+      </div>
     </div>
 
     <!-- Mobile split for Portal and Tools -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding w3-container" style="margin:0 -16px">
       <!-- Portal -->
       <div class="w3-half w3-margin-bottom">
         <h3 class="w3-padding-24 w3-text-light-grey w3-center">Portal &nbsp;&nbsp;&nbsp; <i class="fa fa-external-link w3-opacity"></i></h3>
-        <ul class="w3-ul">
+        <ul class="w3-ul w3-2021-inkwell">
           <li class="w3-bar">
             <a href="https://console.aws.amazon.com/" title="AWS Management Console">
             <i class="fa fa-amazon w3-bar-item w3-mobile w3-xlarge"></i>
@@ -243,7 +264,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <!-- Tools -->
       <div class="w3-half">
         <h3 class="w3-padding-24 w3-text-light-grey w3-center">Tools &nbsp;&nbsp;&nbsp; <i class="fa fa-cogs w3-opacity"></i></h3>
-        <ul class="w3-ul">
+        <ul class="w3-ul w3-2021-inkwell">
           <li class="w3-bar">
             <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" title="AWS CLI">
             <i class="fa fa-amazon w3-bar-item w3-mobile w3-xlarge"></i>
@@ -314,24 +335,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <!-- End Mobile split for Portal and Tools -->
     </div>
   <!-- End Portfolio Section -->
-  </div>
+  </section>
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" style="margin-bottom: 100vh;" id="about">
+  <section class="w3-content w3-justify w3-text-grey w3-padding-64" style="margin-bottom: 100vh;" id="about">
     <h2 class="w3-text-light-grey">About</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>Make IT Work does exactly what the name says, Make Information Technology Work for our customers.  With decades of corporate IT experience, we bring the latest solutions to local customers, in the most cost effective way.  And, while no project is outside of our consideration, we specialize in our commitment to providing enterprise-class IT services to non-profit organizations, for a better tomorrow.</p>
     <blockquote class="w3-panel w3-leftbar w3-sand w3-opacity w3-hover-opacity-off w3-serif w3-small">
-      <span style="font-size:150px;line-height:0.6em;opacity:0.2">&#10077;</span>
       <p><i>"...in a world of cheap PCs and fast Internet links, we find pretty consistently that the only really limiting resource is skilled attention."</i><br>
       &mdash; <b>Eric S. Raymond</b>, <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/" title="The Cathedral and the Bazaar">Cathedral and the Bazaar:  Musings on Linux and Open Source by an Accidental Revolutionary</a></p>
     </blockquote>
 
   <!-- End About Section -->
-  </div>
+  </section>
 
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact" style="margin-bottom: 100vh;">
+  <section class="w3-padding-64 w3-content w3-text-grey" id="contact" style="margin-bottom: 100vh;">
     <h2 class="w3-text-light-grey">Contact</h2>
     <hr style="width:200px" class="w3-opacity">
 
@@ -341,7 +361,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <p><a href="mailto:steven@makeitwork.cloud"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i></a> Email: steven@makeitwork.cloud</p>
     </div><br>
   <!-- End Contact Section -->
-  </div>
+  </section>
   
   <!-- Footer -->
   <!-- <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
@@ -386,9 +406,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 function parseJson(json) {
   var time = json["time"]["updated"];
-  var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
+  var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-blue w3-block\">";
   var usdValue = "<p>BTC value: <b>$" + json["bpi"]["USD"]["rate"] + "</b>"
-  var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
+  var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-xlarge\" style=\"text-shadow: 1px 1px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("btcdata").style.display = 'block';
   document.getElementById("btcdata").innerHTML = section + usdValue + closeButton;
@@ -397,11 +417,12 @@ function parseJson(json) {
 function parseETHJson(json) {
   if (json["data"]["currentStatistics"]["reportedHashrate"] == 0) {
     var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-red w3-block\">";
+    var info = "<p>ETC miner is down!</p>"
   } else {
     var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
+    var info = "<p>ETC miner up with hashrate: <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b>"
   }
-  var info = "<p>ETC mining hashrate: <b>" + json["data"]["currentStatistics"]["reportedHashrate"] + "</b>"
-  var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-hover-green w3-xlarge\" style=\"text-shadow: 2px 2px 0 #444;\"><b>&times;</b></span></p></div>";
+  var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-xlarge\" style=\"text-shadow: 1px 1px 0 #444;\"><b>&times;</b></span></p></div>";
 
   document.getElementById("ethdata").style.display = 'block';
   document.getElementById("ethdata").innerHTML = section + info + closeButton;
