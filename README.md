@@ -1,4 +1,8 @@
 # www
+About this repo
+==
+Free serverless web content with GitHub Actions pushing changes to S3, hosted via CloudFlare.
+
 Google Fonts
 ==
 - https://fonts.google.com/
