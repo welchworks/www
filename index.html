@@ -333,57 +333,5 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
   
 <!-- END PAGE CONTENT -->
 </div>
-
-<script type="text/javascript">
-  var xmlhttp = new XMLHttpRequest();
-  var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var json = JSON.parse(this.responseText);
-      parseJson(json);
-    }
-  };
-
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
-  
-  var ethhttp = new XMLHttpRequest();
-  var ethurl = "https://api-etc.ethermine.org/miner/:0x16b9f7df0fd965b541e5d2132d14422681fb3e35/dashboard";
-
-  ethhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var json = JSON.parse(this.responseText);
-      parseETHJson(json);
-    }
-  };
-
-  ethhttp.open("GET", ethurl, true);
-  ethhttp.send();
-
-function parseJson(json) {
-  var time = json["time"]["updated"];
-  var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-blue w3-block\">";
-  var usdValue = "<p>BTC value: <b>$" + parseFloat(json["bpi"]["USD"]["rate"].replace(',','')).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</b>"
-  var closeButton = "<span onclick=\"document.getElementById('btcdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-xlarge\" style=\"text-shadow: 1px 1px 0 #444;\"><b>&times;</b></span></p></div>";
-
-  document.getElementById("btcdata").style.display = 'block';
-  document.getElementById("btcdata").innerHTML = section + usdValue + closeButton;
-}
-
-function parseETHJson(json) {
-  if (json["data"]["currentStatistics"]["reportedHashrate"] == 0 || json["data"]["currentStatistics"]["reportedHashrate"] == null) {
-    var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-red w3-block\">";
-    var info = "<p>ETC miner down!</p>"
-  } else {
-    var section = "<div class=\"w3-container w3-display-container w3-section w3-right w3-animate-zoom w3-green w3-block\">";
-    var info = "<p>ETC miner up with hashrate: <b>" + (json["data"]["currentStatistics"]["reportedHashrate"] / 1000000).toFixed(1) + " MH/s</b>"
-  }
-  var closeButton = "<span onclick=\"document.getElementById('ethdata').style.display='none'\" class=\"w3-button w3-transparent w3-display-topright w3-xlarge\" style=\"text-shadow: 1px 1px 0 #444;\"><b>&times;</b></span></p></div>";
-
-  document.getElementById("ethdata").style.display = 'block';
-  document.getElementById("ethdata").innerHTML = section + info + closeButton;
-}
-</script>
 </body>
 </html>
